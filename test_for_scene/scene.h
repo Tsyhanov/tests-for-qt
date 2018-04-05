@@ -6,14 +6,21 @@
 class Scene : public QGraphicsScene
 {
     Q_OBJECT
+
+//ATTR
+public:
+    // abscissa grid step size
+    static const int xGrid;
+    // ordinate grid step size
+    static const int yGrid;
+
 public:
     explicit Scene(QWidget *parent = 0);
-    int getGridSize() const {return this->gridSize;}
+    static QPointF snapToGrid(const QPointF &p);
 protected:
     void drawBackground(QPainter *painter, const QRectF &rect);
     void dragMoveEvent(QGraphicsSceneDragDropEvent *event);
 private:
-    int gridSize;
     Track *testtrack;
 };
 

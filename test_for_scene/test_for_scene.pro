@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     scene.cpp \
-    track.cpp
+    track.cpp \
+    itemhandler.cpp
 
 HEADERS += \
         mainwindow.h \
     scene.h \
-    track.h
+    track.h \
+    itemhandler.h
 
 FORMS += \
         mainwindow.ui

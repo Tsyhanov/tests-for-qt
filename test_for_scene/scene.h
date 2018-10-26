@@ -14,14 +14,17 @@ public:
     // ordinate grid step size
     static const int yGrid;
 
+private:
+    Track *testtrack;
+
+//METH
 public:
     explicit Scene(QWidget *parent = 0);
     static QPointF snapToGrid(const QPointF &p);
 protected:
     void drawBackground(QPainter *painter, const QRectF &rect);
     void dragMoveEvent(QGraphicsSceneDragDropEvent *event);
-private:
-    Track *testtrack;
+
 };
 
 #endif // SCENE_H
